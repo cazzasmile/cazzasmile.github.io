@@ -639,6 +639,7 @@ button:disabled {
 }
 
 .hero__seal {
+  display: none;
   position: absolute;
   right: -6vw;
   top: 10%;
@@ -646,6 +647,12 @@ button:disabled {
   opacity: 0.12;
   filter: saturate(0.6);
   animation: float 16s ease-in-out infinite;
+}
+
+@media (min-width: 760px) {
+  .hero__seal {
+    display: block;
+  }
 }
 
 @keyframes float {
@@ -789,6 +796,20 @@ button:disabled {
   font-weight: 500;
 }
 
+@media (max-width: 520px) {
+  .status {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2px;
+    padding: 10px 16px;
+    border-radius: 18px;
+    text-align: center;
+  }
+  .status__detail {
+    flex-basis: 100%;
+  }
+}
+
 /* availability card straddling the hero's bottom edge */
 .avail-wrap {
   position: relative;
@@ -870,8 +891,8 @@ button:disabled {
 .avail__clock {
   margin-top: 18px;
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .avail__time {
