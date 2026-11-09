@@ -24,7 +24,7 @@ npm run card:bleed   # same with 0.125 in bleed for commercial printing
 | --- | --- |
 | Clinic name, doctor, contact, address, time zone, founding date, hours, services & peso prices | `src/data/clinic.ts` |
 | Colour scheme (CSS tokens) | `src/styles/global.css` (`:root` block at the top) |
-| Logo mark (SVG) | `src/components/Logo.tsx` and `public/favicon.svg` (keep them in sync) |
+| Logo (client's seal, PNG) | `src/assets/logo-192.png`, `src/assets/logo-512.png`, `public/favicon.png`, `public/apple-touch-icon.png`; rendered by `src/components/Logo.tsx` |
 | Doctor portrait | `src/assets/doctor-portrait.jpg` (640 × 800, 4:5, plain background) |
 | Hero stats, marquee items | `src/components/Hero.tsx` |
 | About copy, values | `src/components/About.tsx` |

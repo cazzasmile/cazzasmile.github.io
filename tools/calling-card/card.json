@@ -9,7 +9,10 @@
   "clinic": {
     "name": "CazzASmile Dental Clinic",
     "shortName": "CazzASmile",
-    "shortNameLines": ["Cazz A", "Smile"],
+    "shortNameLines": [
+      "Cazz A",
+      "Smile"
+    ],
     "subtitle": "Dental Clinic",
     "address": "Taguig, Manila",
     "established": "Est. 2021",
@@ -29,5 +32,6 @@
     "pinkDeep": "#a9842b",
     "pinkPale": "#f5ead0",
     "cream": "#f8f4ea"
-  }
+  },
+  "logoImage": "src/assets/logo-512.png"
 }

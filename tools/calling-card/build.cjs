@@ -36,7 +36,12 @@ const PW = W + 2 * B, PH = H + 2 * B;
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-const logo = (size, ringA, ringB, toothA, toothB, smile, id) => `
+// When card.json names a logoImage (path relative to the repo root), the client's own
+// mark is used everywhere; otherwise the generic drawn tooth below is rendered.
+const logoImageUrl = cfg.logoImage ? 'file://' + path.join(ROOT, cfg.logoImage) : null;
+const logo = (size, ringA, ringB, toothA, toothB, smile, id) => logoImageUrl
+  ? `<img src="${logoImageUrl}" width="${size}" height="${size}" style="display:block;border-radius:50%" alt="">`
+  : `
 <svg viewBox="0 0 64 64" width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="t${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${toothA}"/><stop offset="1" stop-color="${toothB}"/></linearGradient>
