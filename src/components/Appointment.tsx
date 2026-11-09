@@ -4,7 +4,7 @@ import {
   BOOKING_LEAD_MINUTES,
   CLINIC,
   findService,
-  formatPeso,
+  formatPriceRange,
   SERVICES,
   SLOT_STEP_MINUTES,
   WEEKLY_HOURS,
@@ -319,11 +319,11 @@ export function Appointment({ request }: AppointmentProps) {
           <div className="section__head">
             <span className="eyebrow">Book an appointment</span>
             <h2 id="appointment-title" className="h2">
-              Pick a time that <span className="italic-accent">suits you</span>.
+              Reserve your chair in <span className="italic-accent">under a minute</span>.
             </h2>
             <p className="lede">
-              Choose a service, see live availability and reserve your seat in under a minute. We
-              will confirm by text or email.
+              Choose a treatment, pick an open slot and leave your details. We confirm by text or
+              email, usually within the hour during clinic time.
             </p>
           </div>
         </Reveal>
@@ -388,8 +388,7 @@ export function Appointment({ request }: AppointmentProps) {
                           <span className="option__name">{s.name}</span>
                           <br />
                           <span className="option__meta">
-                            {s.priceFrom ? 'from ' : ''}
-                            {formatPeso(s.price)} · {s.durationMinutes} min
+                            {formatPriceRange(s)} · {s.durationMinutes} min
                           </span>
                         </span>
                       </button>
@@ -744,7 +743,7 @@ export function Appointment({ request }: AppointmentProps) {
                   ) : null}
 
                   <div className="panel__actions" style={{ justifyContent: 'center' }}>
-                    <button type="button" className="btn btn--pink" onClick={resetFlow}>
+                    <button type="button" className="btn btn--gold" onClick={resetFlow}>
                       Book another appointment
                     </button>
                   </div>
@@ -805,11 +804,11 @@ export function Appointment({ request }: AppointmentProps) {
                 </li>
               </ul>
               <div className="summary__total">
-                <span>{service?.priceFrom ? 'Estimated from' : 'Estimated total'}</span>
-                <strong>{service ? formatPeso(service.price) : '—'}</strong>
+                <span>Price range</span>
+                <strong>{service ? formatPriceRange(service) : '—'}</strong>
               </div>
               <p className="summary__note">
-                Final cost is confirmed after examination. Payment is settled at the clinic.
+                Your exact quote within this range is confirmed at the clinic before treatment.
               </p>
             </aside>
           </Reveal>

@@ -1,7 +1,7 @@
-# Healthy Smile Care Dental Clinic — digital calling card
+# CazzASmile Dental Clinic — digital calling card
 
-A single-page, scrollable web app for **Healthy Smile Care Dental Clinic**
-(Dr. Stiffany Faith Sitoy, DMD). It presents the clinic's availability, story,
+A single-page, scrollable web app for **CazzASmile Dental Clinic**
+(Dr. Cazzy J. Maglaway, DMD). It presents the clinic's availability, story,
 services with peso pricing, and an interactive appointment booker.
 
 > **Demo status.** Most content (prices, founding date, ratings, patient
@@ -18,8 +18,8 @@ services with peso pricing, and an interactive appointment booker.
 | **Services** | Filterable grid of treatments with prices in Philippine pesos (₱) and typical duration. "Book" jumps straight into the booking flow with that service pre-selected. |
 | **Appointment** | Three-step booker: service → calendar + time slots (closed days, past dates, lunch break and taken slots are blocked) → patient details with validation. Shows a reference code and lists upcoming bookings with cancel. |
 
-Brand: baby pink (`#f8c8d4`) and wooden brown (`#5a3a26`) on warm cream.
-Fonts: Fraunces (display) and Plus Jakarta Sans (body), self-hosted.
+Brand: deep emerald green (`#14523d`), brushed gold (`#c9a24a`) and warm cream.
+Fonts: Cormorant (display), Cinzel (wordmark) and DM Sans (body), self-hosted.
 
 ## Stack
 

@@ -47,8 +47,8 @@ export default function App() {
       <main id="main">
         <Hero />
         <Marquee />
-        <About />
         <Services onBook={handleBook} />
+        <About />
         <Appointment request={request} />
       </main>
       <Footer />

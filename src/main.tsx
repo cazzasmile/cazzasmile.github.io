@@ -1,7 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import '@fontsource-variable/plus-jakarta-sans'
-import '@fontsource-variable/fraunces'
+import '@fontsource-variable/dm-sans'
+import '@fontsource-variable/cormorant'
+import '@fontsource-variable/cormorant/wght-italic.css'
+import '@fontsource/cinzel/600.css'
 import './styles/global.css'
 import App from './App'
 

@@ -18,14 +18,14 @@ const OUT = path.join(__dirname, 'out');
 fs.mkdirSync(OUT, { recursive: true });
 
 const cfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'card.json'), 'utf8'));
-const C = cfg.colors;
+const C = cfg.colors; // roles: brownDark/brown/brownMid = primary shades, pink* = accent shades
 
 const fontFile = (pkg, file) =>
   'file://' + path.join(ROOT, 'node_modules', '@fontsource-variable', pkg, 'files', file);
 const F = {
-  fraunces: fontFile('fraunces', 'fraunces-latin-wght-normal.woff2'),
-  frauncesItalic: fontFile('fraunces', 'fraunces-latin-wght-italic.woff2'),
-  jakarta: fontFile('plus-jakarta-sans', 'plus-jakarta-sans-latin-wght-normal.woff2'),
+  fraunces: fontFile('cormorant', 'cormorant-latin-wght-normal.woff2'),
+  frauncesItalic: fontFile('cormorant', 'cormorant-latin-wght-italic.woff2'),
+  jakarta: fontFile('dm-sans', 'dm-sans-latin-wght-normal.woff2'),
 };
 
 // Card is 3.5in x 2in → 336 x 192 CSS px at 96 dpi. B = bleed in px (12 = 0.125in).

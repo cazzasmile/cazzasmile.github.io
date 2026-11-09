@@ -13,7 +13,8 @@ export function Footer() {
           <div>
             <Brand onClick={() => scrollToSection('home')} />
             <p className="footer__blurb">
-              {CLINIC.tagline} Led by Dr. {CLINIC.doctor.fullName}, {CLINIC.doctor.title}.
+              <em>{CLINIC.tagline}</em> General dentistry for families in {CLINIC.address}, led by
+              Dr. {CLINIC.doctor.fullName}, {CLINIC.doctor.title}.
             </p>
           </div>
 

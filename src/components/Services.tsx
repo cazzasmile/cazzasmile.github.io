@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-  formatPeso,
+  formatPriceRange,
   SERVICE_CATEGORIES,
   SERVICES,
   type Service,
@@ -24,13 +24,13 @@ export function Services({ onBook }: ServicesProps) {
       <div className="container">
         <Reveal>
           <div className="section__head section__head--center">
-            <span className="eyebrow">Services &amp; pricing</span>
+            <span className="eyebrow">Services &amp; price ranges</span>
             <h2 id="services-title" className="h2">
-              Everything your smile needs, <span className="italic-accent">priced clearly</span>.
+              General dentistry, <span className="italic-accent">priced in the open</span>.
             </h2>
             <p className="lede">
-              Transparent peso pricing for every treatment. Final quotes are confirmed after your
-              consultation.
+              Every treatment comes with a price range up front, so there are no surprises. Your
+              exact quote is confirmed at your consultation.
             </p>
           </div>
         </Reveal>
@@ -51,46 +51,55 @@ export function Services({ onBook }: ServicesProps) {
           </div>
         </Reveal>
 
-        <div className="services__grid" aria-live="polite">
-          {visible.map((service, i) => (
-            <article
-              // Keying on filter re-runs the entrance animation after filtering.
-              key={`${filter}-${service.id}`}
-              className="service"
-              style={{ animationDelay: `${Math.min(i, 8) * 45}ms` }}
-            >
-              <div className="service__top">
+        <Reveal delay={120}>
+          <div className="ledger" aria-live="polite">
+            <div className="ledger__head" aria-hidden="true">
+              <span />
+              <span>Treatment</span>
+              <span>Price range</span>
+              <span />
+            </div>
+            {visible.map((service, i) => (
+              <article
+                // Keying on filter re-runs the entrance animation after filtering.
+                key={`${filter}-${service.id}`}
+                className="service"
+                style={{ animationDelay: `${Math.min(i, 10) * 35}ms` }}
+              >
                 <span className="service__icon">
                   <ServiceGlyph icon={service.icon} />
                 </span>
-                {service.popular ? <span className="service__badge">Popular</span> : null}
-              </div>
-              <div className="service__cat">{service.category}</div>
-              <h3 className="service__name">{service.name}</h3>
-              <p className="service__desc">{service.description}</p>
-              <div className="service__foot">
-                <div>
-                  {service.priceFrom ? <span className="price__from">from</span> : null}
-                  <span className="price__value">{formatPeso(service.price)}</span>
-                  <span className="price__dur">≈ {service.durationMinutes} min</span>
+                <div className="service__main">
+                  <h3 className="service__name">
+                    {service.name}
+                    {service.popular ? <span className="service__badge">Popular</span> : null}
+                  </h3>
+                  <p className="service__desc">{service.description}</p>
                 </div>
-                <button
-                  type="button"
-                  className="btn btn--ghost btn--sm"
-                  onClick={() => onBook(service)}
-                  aria-label={`Book ${service.name}`}
-                >
-                  Book
-                  <ArrowRightIcon className="btn__icon" />
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
+                <div className="service__meta">
+                  <span className="price__value">{formatPriceRange(service)}</span>
+                  {service.priceUnit ? <span className="price__unit">{service.priceUnit}</span> : null}
+                  <span className="price__dur">≈ {service.durationMinutes} min · {service.category}</span>
+                </div>
+                <div className="service__action">
+                  <button
+                    type="button"
+                    className="btn btn--ghost btn--sm"
+                    onClick={() => onBook(service)}
+                    aria-label={`Book ${service.name}`}
+                  >
+                    Book
+                    <ArrowRightIcon className="btn__icon" />
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Reveal>
 
         <p className="services__note">
-          Prices shown are indicative and in Philippine pesos (₱). Senior citizen and PWD discounts
-          apply as provided by law.
+          Ranges are in Philippine pesos (₱) and cover typical cases; complex cases are quoted
+          individually. Senior citizen and PWD discounts apply as provided by law.
         </p>
       </div>
     </section>

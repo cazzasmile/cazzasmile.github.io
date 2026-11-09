@@ -1,33 +1,33 @@
 {
-  "siteUrl": "https://healthysmilecare.github.io/",
-  "siteLabel": "healthysmilecare.github.io",
+  "siteUrl": "https://cazzasmile.github.io/",
+  "siteLabel": "cazzasmile.github.io",
   "doctor": {
-    "name": "Stiffany Faith Sitoy",
+    "name": "Cazzy J. Maglaway",
     "designation": "DMD",
-    "role": "Doctor of Dental Medicine · Clinic Director"
+    "role": "Doctor of Dental Medicine · General Dentist"
   },
   "clinic": {
-    "name": "Healthy Smile Care Dental Clinic",
-    "shortName": "Healthy Smile Care",
-    "shortNameLines": ["Healthy Smile", "Care"],
+    "name": "CazzASmile Dental Clinic",
+    "shortName": "CazzASmile",
+    "shortNameLines": ["Cazz A", "Smile"],
     "subtitle": "Dental Clinic",
-    "address": "Kuala Lumpur",
-    "established": "Est. 2016",
-    "tagline": "Gentle, modern dentistry",
-    "taglineAccent": "for every smile."
+    "address": "Taguig, Manila",
+    "established": "Est. 2021",
+    "tagline": "Casting smiles,",
+    "taglineAccent": "one tooth at a time."
   },
   "contact": {
-    "phone": "0912 345 6789",
-    "email": "dentalclinic@uv.com"
+    "phone": "0908 765 4321",
+    "email": "cazzasmile@clinic.com"
   },
   "colors": {
-    "brownDark": "#3b2518",
-    "brown": "#5a3a26",
-    "brownMid": "#7a4f30",
-    "brownLight": "#a06c45",
-    "pink": "#f3abbd",
-    "pinkDeep": "#d96f8c",
-    "pinkPale": "#fde7ec",
-    "cream": "#fffaf7"
+    "brownDark": "#0a2a1f",
+    "brown": "#14523d",
+    "brownMid": "#1b6b4f",
+    "brownLight": "#8a6a1f",
+    "pink": "#c9a24a",
+    "pinkDeep": "#a9842b",
+    "pinkPale": "#f5ead0",
+    "cream": "#f8f4ea"
   }
 }

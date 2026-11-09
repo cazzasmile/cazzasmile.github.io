@@ -1,7 +1,7 @@
 # Project guide for Claude
 
 Dental clinic "digital calling card" website + printable calling card.
-Live example: https://healthysmilecare.github.io/ (repo `healthysmilecare/healthysmilecare.github.io`).
+Live example: https://cazzasmile.github.io/ (repo `cazzasmile/cazzasmile.github.io`).
 The same codebase is the **template for every new clinic site**. For a new clinic,
 follow `docs/NEW-CLINIC-PLAYBOOK.md` step by step.
 
